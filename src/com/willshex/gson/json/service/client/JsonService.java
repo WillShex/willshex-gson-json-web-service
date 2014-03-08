@@ -38,7 +38,7 @@ public abstract class JsonService {
 
 		RequestBuilder builder = new RequestBuilder(RequestBuilder.POST, URL.encode(Url));
 
-		requestData += JsonUtils.cleanJson(input.toJson().toString());
+		requestData += URL.encodeQueryString(JsonUtils.cleanJson(input.toJson().toString()));
 
 		builder.setHeader("Content-Type", "application/x-www-form-urlencoded");
 
