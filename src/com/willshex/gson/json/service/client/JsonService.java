@@ -9,10 +9,8 @@ import com.spacehopperstudios.utility.JsonUtils;
 import com.willshex.gson.json.service.client.JsonServiceCallEventHandler.JsonServiceCallFailure;
 import com.willshex.gson.json.service.client.JsonServiceCallEventHandler.JsonServiceCallStart;
 import com.willshex.gson.json.service.client.JsonServiceCallEventHandler.JsonServiceCallSuccess;
-import com.willshex.gson.json.service.shared.Error;
 import com.willshex.gson.json.service.shared.Request;
 import com.willshex.gson.json.service.shared.Response;
-import com.willshex.gson.json.service.shared.StatusType;
 
 public abstract class JsonService {
 
@@ -31,15 +29,11 @@ public abstract class JsonService {
 		bus = value;
 	}
 
-	protected void parseResponse(String responseText, Response outputParameter) {
-		if (responseText != null && !"".equals(responseText)) {
+	protected void parseResponse(com.google.gwt.http.client.Response response, Response outputParameter) throws HttpException {
+		String responseText = null;
+		if (response.getStatusCode() >= 200 && response.getStatusCode() < 300 && (responseText = response.getText()) != null && !"".equals(responseText)) {
 			outputParameter.fromJson(responseText);
-		} else {
-			outputParameter.status = StatusType.StatusTypeFailure;
-			outputParameter.error = new Error();
-			outputParameter.error.code = -1;
-			outputParameter.error.message = "Response was empty";
-		}
+		} else if (response.getStatusCode() >= 400) throw new HttpException(response.getStatusCode(), response.getStatusText());
 	}
 
 	protected com.google.gwt.http.client.Request sendRequest(String action, Request input, RequestCallback callback) throws RequestException {
