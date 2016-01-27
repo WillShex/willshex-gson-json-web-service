@@ -1,6 +1,6 @@
 //  
 //  Error.java
-//  storedata
+//  willshex-gson-web-service
 //
 //  Created by William Shakour on 21 June 2013.
 //  Copyrights © 2013 SPACEHOPPER STUDIOS LTD. All rights reserved.

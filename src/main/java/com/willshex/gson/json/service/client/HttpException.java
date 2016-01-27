@@ -1,9 +1,9 @@
 //
 //  HttpException.java
-//  spchopr.gson.json.service
+//  willshex-gson-web-service
 //
 //  Created by William Shakour (billy1380) on 19 Mar 2014.
-//  Copyright © 2014 SPACEHOPPER STUDIOS LTD. All rights reserved.
+//  Copyright © 2014 WillShex Limited. All rights reserved.
 //
 package com.willshex.gson.json.service.client;
 

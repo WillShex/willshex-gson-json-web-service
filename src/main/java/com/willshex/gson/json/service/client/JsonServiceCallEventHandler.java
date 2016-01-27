@@ -1,9 +1,9 @@
 //  
 //  JsonServiceCallEventHandler.java
-//  reflection.io
+//  willshex-gson-web-service
 //
 //  Created by William Shakour on March 17, 2014.
-//  Copyrights © 2014 SPACEHOPPER STUDIOS LTD. All rights reserved.
+//  Copyrights © 2014 WillShex Limited. All rights reserved.
 //
 package com.willshex.gson.json.service.client;
 
