@@ -5,12 +5,12 @@
 //  Created by William Shakour on March 17, 2014.
 //  Copyrights © 2014 WillShex Limited. All rights reserved.
 //
-package com.willshex.gson.json.service.client;
+package com.willshex.gson.web.service.client;
 
 import com.google.gwt.event.shared.EventHandler;
 import com.google.gwt.event.shared.GwtEvent;
-import com.willshex.gson.json.service.shared.Request;
-import com.willshex.gson.json.service.shared.Response;
+import com.willshex.gson.web.service.shared.Request;
+import com.willshex.gson.web.service.shared.Response;
 
 public interface JsonServiceCallEventHandler extends EventHandler {
 	public static final GwtEvent.Type<JsonServiceCallEventHandler> TYPE = new GwtEvent.Type<JsonServiceCallEventHandler>();

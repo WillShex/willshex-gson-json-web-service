@@ -5,7 +5,7 @@
 //  Created by William Shakour (billy1380) on 19 Mar 2014.
 //  Copyright © 2014 WillShex Limited. All rights reserved.
 //
-package com.willshex.gson.json.service.client;
+package com.willshex.gson.web.service.client;
 
 /**
  * @author billy1380

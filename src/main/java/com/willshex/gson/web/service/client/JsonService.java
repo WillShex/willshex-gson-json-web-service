@@ -5,19 +5,19 @@
 //  Created by William Shakour on 21 June 2013.
 //  Copyrights © 2013 WillShex Limited. All rights reserved.
 //
-package com.willshex.gson.json.service.client;
+package com.willshex.gson.web.service.client;
 
 import com.google.gwt.event.shared.HasHandlers;
 import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.URL;
+import com.willshex.gson.web.service.client.JsonServiceCallEventHandler.JsonServiceCallFailure;
+import com.willshex.gson.web.service.client.JsonServiceCallEventHandler.JsonServiceCallStart;
+import com.willshex.gson.web.service.client.JsonServiceCallEventHandler.JsonServiceCallSuccess;
+import com.willshex.gson.web.service.shared.Request;
+import com.willshex.gson.web.service.shared.Response;
 import com.willshex.utility.JsonUtils;
-import com.willshex.gson.json.service.client.JsonServiceCallEventHandler.JsonServiceCallFailure;
-import com.willshex.gson.json.service.client.JsonServiceCallEventHandler.JsonServiceCallStart;
-import com.willshex.gson.json.service.client.JsonServiceCallEventHandler.JsonServiceCallSuccess;
-import com.willshex.gson.json.service.shared.Request;
-import com.willshex.gson.json.service.shared.Response;
 
 public abstract class JsonService {
 
