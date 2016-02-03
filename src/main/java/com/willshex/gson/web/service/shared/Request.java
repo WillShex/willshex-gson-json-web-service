@@ -10,7 +10,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.willshex.gson.json.shared.Jsonable;
+import com.willshex.gson.shared.Jsonable;
 
 public class Request extends Jsonable {
 	public String accessCode;
