@@ -2,7 +2,7 @@
 <module rename-to='willshex.gson.web.service'>
   <inherits name='com.google.gwt.user.User'/>
   <inherits name="com.google.gwt.json.JSON" />
-  <inherits name="com.willshex.gson.Json" />
+  <inherits name="com.willshex.gson.Gson" />
   <source path='service/client'/>
   <source path='service/shared'/>
 </module>
