@@ -17,6 +17,7 @@ import com.willshex.gson.web.service.shared.Response;
  * @author William Shakour (billy1380)
  *
  */
+@FunctionalInterface
 public interface CallSuccessEventHandler extends EventHandler {
 
 	public static final GwtEvent.Type<CallSuccessEventHandler> TYPE = new GwtEvent.Type<CallSuccessEventHandler>();

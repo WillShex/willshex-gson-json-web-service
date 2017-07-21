@@ -21,10 +21,12 @@ import com.willshex.utility.JsonUtils;
 
 public abstract class JsonService {
 
+	@FunctionalInterface
 	public interface AsyncSuccess<S, T> {
 		void call (S in, T out);
 	}
 
+	@FunctionalInterface
 	public interface AsyncFailure<S> {
 		void call (S in, Throwable cause);
 	}
