@@ -12,14 +12,22 @@ import com.google.gwt.http.client.RequestBuilder;
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.http.client.RequestException;
 import com.google.gwt.http.client.URL;
-import com.willshex.gson.web.service.client.JsonServiceCallEventHandler.JsonServiceCallFailure;
-import com.willshex.gson.web.service.client.JsonServiceCallEventHandler.JsonServiceCallStart;
-import com.willshex.gson.web.service.client.JsonServiceCallEventHandler.JsonServiceCallSuccess;
+import com.willshex.gson.web.service.client.event.CallFailureEventHandler.JsonServiceCallFailure;
+import com.willshex.gson.web.service.client.event.CallStartEventHandler.JsonServiceCallStart;
+import com.willshex.gson.web.service.client.event.CallSuccessEventHandler.JsonServiceCallSuccess;
 import com.willshex.gson.web.service.shared.Request;
 import com.willshex.gson.web.service.shared.Response;
 import com.willshex.utility.JsonUtils;
 
 public abstract class JsonService {
+
+	public interface AsyncSuccess<S, T> {
+		void call (S in, T out);
+	}
+
+	public interface AsyncFailure<S> {
+		void call (S in, Throwable cause);
+	}
 
 	protected String url;
 	protected HasHandlers bus;
